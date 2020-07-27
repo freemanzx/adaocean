@@ -1,6 +1,1 @@
-{
-  "itn": {
-    "owner": "ed25519_pk1tt5cs40a5rep0erku3r6ul2d5pmsarr05l07zfvxmdv0zrlvhyjs0zgz93",
-    "witness": "ed25519_sig1cp7s7zd7h6tmqrmxvd53w9qpch0fx9se47n27y955vxupf93g4k7atyjgdfy8pkelanp9h54jkd8jsl7vj9uwy706884e45q38pzgzqqz4yh3"
-  }
-}
+{"itn": {"owner": "ed25519_pk1tt5cs40a5rep0erku3r6ul2d5pmsarr05l07zfvxmdv0zrlvhyjs0zgz93","witness": "ed25519_sig1cp7s7zd7h6tmqrmxvd53w9qpch0fx9se47n27y955vxupf93g4k7atyjgdfy8pkelanp9h54jkd8jsl7vj9uwy706884e45q38pzgzqqz4yh3"}}
