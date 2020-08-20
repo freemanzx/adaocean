@@ -1,18 +1,14 @@
 {
-    "itn": {
-        "owner": "ed25519_pk1tt5cs40a5rep0erku3r6ul2d5pmsarr05l07zfvxmdv0zrlvhyjs0zgz93",
-        "witness": "ed25519_sig1un3g0uq7fujyw9c2ca0a8xe8p4a0n9shv9e3f09p6um6jtvj8c2u2f68cnn626futkeuesp3mygds3aw2dmma4lecadvv2082cucyqszc65mn"
+  "info": {
+    "url_png_icon_64x64": "https://adaocean.com/images/extended-dolphin.png",
+    "url_png_logo": "https://adaocean.com/images/extended-banner.png",
+    "social": {
+      "twitter_handle": "ada_ocean",
+      "telegram_handle": "ada_ocean"
     },
-    "info": {
-      "url_png_icon_64x64": "https://adaocean.com/images/extended-dolphin.png",
-      "url_png_logo": "https://adaocean.com/images/extended-banner.png",
-      "social": {
-        "twitter_handle": "ada_ocean",
-        "telegram_handle": "ada_ocean"
-      },
-      "about": {
-        "me": "Only 0.9 percent margin fee with minimum cost per epoch. One of the most successful Stake Pool Cloud Clusters on ITN network. Five relays for efficient block propagation. Servers fully monitored for 24/7 availability."
-      }
+    "about": {
+      "me": "Only 0.9 percent margin fee with minimum cost per epoch. One of the most successful Stake Pool Cloud Clusters on ITN network. Five relays for efficient block propagation. Servers fully monitored for 24/7 availability."
     }
   }
-  
+}
+
