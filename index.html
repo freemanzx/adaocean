@@ -185,12 +185,15 @@
       <section class="section section-lg bg-default">
         <div class="container">
           <h3 class="wow fadeScale">ADA Ocean Stake Pools</h3>
+          <div style="padding-top: 15px;">
+            Above 200M, OCEAN is considered a saturated stake pool. All Delagators are weclome to delegate to our remaining OCEA2, OCEA3, OCEA4 or OCEA5 stake pools.
+          </div>
           <!-- Owl Carousel-->
           <!-- <div class="owl-carousel owl-style-8" data-items="1" data-sm-items="2" data-lg-items="3" data-margin="30" data-dots="true" data-mouse-drag="false"> -->
             <div class="row row-sm-5 row-md-5 justify-content-center">
               <div class="col-sm-6 col-md-4">
                 <article class="box-info-modern wow slideInUp" data-wow-delay=".1s">
-                  <div class="card sm-6 mb-4 box-shadow">
+                  <div id="OCEAN" class="card sm-6 mb-4 box-shadow">
                     <div class="card-header">
                       <h4 class="my-0 font-weight-normal">ADA Ocean One</h4>
                       <h4 class="my-0 font-weight-normal">Ticker: OCEAN</h4>
@@ -200,13 +203,17 @@
                       <div class="box-info-modern-text">Pool margin: 0.9%</div>
                       <div class="box-info-modern-text">Pledge: 500K ADA</div>
                       <div class="box-info-modern-text">Cost per epoch: 340 ADA</div>
+                      <div class="box-info-modern-text" id="liveStake"></div>
                     </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> 
                   </div>
                 </article>
               </div>
               <div class="col-sm-6 col-md-4">
                 <article class="box-info-modern wow slideInUp" data-wow-delay=".1s">
-                  <div class="card sm-6 mb-4 box-shadow">
+                  <div id="OCEA2" class="card sm-6 mb-4 box-shadow">
                     <div class="card-header">
                       <h4 class="my-0 font-weight-normal">ADA Ocean Two</h4>
                       <h4 class="my-0 font-weight-normal">Ticker: OCEA2</h4>
@@ -216,13 +223,17 @@
                       <div class="box-info-modern-text">Pool margin: 0.9%</div>
                       <div class="box-info-modern-text">Pledge: 500K ADA</div>
                       <div class="box-info-modern-text">Cost per epoch: 340 ADA</div>
+                      <div class="box-info-modern-text" id="liveStake"></div>
                     </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> 
                   </div>
                 </article>
               </div>
               <div class="col-sm-6 col-md-4">
                 <article class="box-info-modern wow slideInUp" data-wow-delay=".1s">
-                  <div class="card sm-6 mb-4 box-shadow">
+                  <div id="OCEA3" class="card sm-6 mb-4 box-shadow">
                     <div class="card-header">
                       <h4 class="my-0 font-weight-normal">ADA Ocean Three</h4>
                       <h4 class="my-0 font-weight-normal">Ticker: OCEA3</h4>
@@ -232,7 +243,11 @@
                       <div class="box-info-modern-text">Pool margin: 0.9%</div>
                       <div class="box-info-modern-text">Pledge: 500K ADA</div>
                       <div class="box-info-modern-text">Cost per epoch: 340 ADA</div>
+                      <div class="box-info-modern-text" id="liveStake"></div>
                     </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> 
                   </div>
                 </article>
               </div>
@@ -240,7 +255,7 @@
             <div class="row row-sm-5 row-md-5 justify-content-center">
               <div class="col-sm-6 col-md-4">
                 <article class="box-info-modern wow slideInUp" data-wow-delay=".1s">
-                  <div class="card sm-6 mb-4 box-shadow">
+                  <div id="OCEA4" class="card sm-6 mb-4 box-shadow">
                     <div class="card-header">
                       <h4 class="my-0 font-weight-normal">ADA Ocean Four</h4>
                       <h4 class="my-0 font-weight-normal">Ticker: OCEA4</h4>
@@ -250,13 +265,17 @@
                       <div class="box-info-modern-text">Pool margin: 0.9%</div>
                       <div class="box-info-modern-text">Pledge: 500K ADA</div>
                       <div class="box-info-modern-text">Cost per epoch: 340 ADA</div>
+                      <div class="box-info-modern-text" id="liveStake"></div>
                     </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> 
                   </div>
                 </article>
               </div>
               <div class="col-sm-6 col-md-4">
                 <article class="box-info-modern wow slideInUp" data-wow-delay=".1s">
-                  <div class="card sm-6 mb-4 box-shadow">
+                  <div id="OCEA5" class="card sm-6 mb-4 box-shadow">
                     <div class="card-header">
                       <h4 class="my-0 font-weight-normal">ADA Ocean Five</h4>
                       <h4 class="my-0 font-weight-normal">Ticker: OCEA5</h4>
@@ -266,7 +285,11 @@
                       <div class="box-info-modern-text">Pool margin: 0.9%</div>
                       <div class="box-info-modern-text">Pledge: 500K ADA</div>
                       <div class="box-info-modern-text">Cost per epoch: 340 ADA</div>
+                      <div class="box-info-modern-text" id="liveStake"></div>
                     </div>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> 
                   </div>
                 </article>
               </div>

@@ -247,7 +247,60 @@
 				}
 			}
 		}
+
+		function moneyFormat(num,locale='en') {
+			// Nine Zeroes for Billions
+			return Math.abs(Number(num)) >= 1.0e+9
+				? Math.round(Math.abs(Number(num)) / 1.0e+9 ) + "b"
+				// Six Zeroes for Millions
+				: Math.abs(Number(num)) >= 1.0e+6
+					? Math.round(Math.abs(Number(num)) / 1.0e+6 ) + "m"
+					// Three Zeroes for Thousands
+					: Math.abs(Number(num)) >= 1.0e+3
+						? Math.round(Math.abs(Number(num)) / 1.0e+3 ) + "t"
+						: Math.abs(Number(num)); 
+		}
+
+		function setProgress(poolId) {
+			$.ajax({ url: "https://js.adapools.org/pools/" + poolId + "/summary.json" })
+				.then(function(response) {
+					var id = response.data.db_ticker;
+					var saturation = Math.floor(response.data.saturated * 100);
+					var cssSaturation = saturation > 100 ? 100 : saturation;
+					var cssBackgroung;
+					var text = "";
+					if (saturation > 100) {
+						cssBackgroung = "bg-danger";
+						text = " ovesaturated"
+					} else if (saturation > 95) {
+						cssBackgroung = "bg-danger";
+						text = "nearly ovesaturated"
+					} else if (saturation > 90) {
+						cssBackgroung = "bg-warning";
+					} else {
+						cssBackgroung = "bg-success";
+					}
+					$("#"+id+" .progress-bar")
+						.css('width', cssSaturation+'%')
+						.attr('aria-valuenow', cssSaturation)
+						.text(Math.floor(saturation) + "%")
+						.addClass(cssBackgroung);
+					
+					$("#"+id+" #liveStake").text("LiveStake: " + moneyFormat(Math.floor(response.data.total_stake / 1000000)));
+				});
+		}
+		setProgress("eaa778d97077ff7725fe4cbb70b514d840407a45a3c244ac05f6a83d");
+		setProgress("c2c52eab0d713209b337d8ff8fe28e1ccae2f70eb7ed1ee27e8c866a");
+		setProgress("660f20fb9d419173ac623786ad3e6dc11a23951981e0e83e98233d29");
+		setProgress("cfff13497008842ab170eae18ecf43be7eb4fa51bdd503821ddaaf19");
+		setProgress("83f09b0af923a095a1c17905e802a35d1044f974b25d2a755a2d8266");
+
 	});
+
+	function copyToClipboard(text) {
+		t = document.createElement("textarea");
+		document.body.appendChild(t), t.setAttribute("id", "dummy_id"), document.getElementById("dummy_id").value = text, t.select(), document.execCommand("copy"), document.body.removeChild(t);
+	}
 
 	// Initialize scripts that require a finished document
 	$(function () {
