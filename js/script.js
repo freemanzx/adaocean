@@ -272,10 +272,10 @@
 					if (saturation > 100) {
 						cssBackgroung = "bg-danger";
 						text = " ovesaturated"
-					} else if (saturation > 95) {
+					} else if (saturation > 99) {
 						cssBackgroung = "bg-danger";
 						text = "nearly ovesaturated"
-					} else if (saturation > 90) {
+					} else if (saturation > 95) {
 						cssBackgroung = "bg-warning";
 					} else {
 						cssBackgroung = "bg-success";
