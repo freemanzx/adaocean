@@ -261,11 +261,10 @@
 						: Math.abs(Number(num)); 
 		}
 
-		function setProgress(poolId) {
-			$.ajax({ url: "https://js.adapools.org/pools/" + poolId + "/summary.json" })
+		function setProgress(poolTicker, poolId) {
+			$.ajax({ url: "https://js.cexplorer.io/api-static/pool/" + poolId + ".json" })
 				.then(function(response) {
-					var id = response.data.db_ticker;
-					var saturation = Math.floor(response.data.saturated * 100);
+					var saturation = Math.floor(response.data.saturation * 100);
 					var cssSaturation = saturation > 100 ? 100 : saturation;
 					var cssBackgroung;
 					var text = "";
@@ -280,25 +279,23 @@
 					} else {
 						cssBackgroung = "bg-success";
 					}
-					$("#"+id+" .progress-bar")
+					$("#"+poolTicker+" .progress-bar")
 						.css('width', cssSaturation+'%')
 						.attr('aria-valuenow', cssSaturation)
 						.text(Math.floor(saturation) + "%")
 						.addClass(cssBackgroung);
 					
-					$("#"+id+" #liveStake").text("LiveStake: " + moneyFormat(Math.floor(response.data.total_stake / 1000000)));
+					$("#"+poolTicker+" #liveStake").text("LiveStake: " + moneyFormat(Math.floor(response.data.stake / 1000000)));
 				});
 		}
-		setProgress("eaa778d97077ff7725fe4cbb70b514d840407a45a3c244ac05f6a83d");
-		setProgress("15b5c3202b12c66377626bf881af87a9907dc89b6a8d86b0c0e8823e");
-		setProgress("c2c52eab0d713209b337d8ff8fe28e1ccae2f70eb7ed1ee27e8c866a");
-		setProgress("660f20fb9d419173ac623786ad3e6dc11a23951981e0e83e98233d29");
-		setProgress("cfff13497008842ab170eae18ecf43be7eb4fa51bdd503821ddaaf19");
-		setProgress("83f09b0af923a095a1c17905e802a35d1044f974b25d2a755a2d8266");
-		setProgress("4a463cd2a7ba953d1ff3514c1bc41910fa8888fd6bec83905cd642d8");
-		setProgress("3778d01333555227a997e141d50c95ac3824d8e28fefe8634037b114");
-		setProgress("c0d0e3629eff3e95df16ada0a408405c85b70d48933f579b4e2d1e2a");
-		setProgress("b77e7341ce9cabe8a1cced4734c2fea741fb0e28f3ca600cf9658177");
+		setProgress("OCEAN", "pool1a2nh3ktswllhwf07fjahpdg5mpqyq7j950pyftq9765r6t4cefl");
+		setProgress("OCEA1", "pool1zk6uxgptztrxxamzd0ugrtu84xg8mjymd2xcdvxqazpruqt9r3x");
+		setProgress("OCEA2", "pool1ctzja2cdwyeqnvehmrlclc5wrn9w9acwklk3acn73jrx56d66vs");
+		setProgress("OCEA3", "pool1vc8jp7uagxgh8trzx7r260ndcydz89ges8sws05cyv7jj8q8gqs");
+		setProgress("OCEA4", "pool1ell3xjtspzzz4vtsatscan6rheltf7j3hh2s8qsam2h3jvcxzm9");
+		setProgress("OCEA5", "pool1s0cfkzheywsftgwp0yz7sq4rt5gyf7t5kfwj5a269kpxvndjn6q");
+		setProgress("OCEA6", "pool1ffrre548h22n68ln29xph3qezrag3z8ad0kg8yzu6epds3qr58k");
+		setProgress("OCEA7", "pool1xaudqyen24fz02vhu9qa2ry44suzfk8z3lh7sc6qx7c3gpweww2");
 
 	});
 
