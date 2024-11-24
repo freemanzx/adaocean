@@ -1,0 +1,96 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP119": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0119/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP119:body",
+      "@context": {
+        "references": {
+          "@id": "CIP119:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Identity": "CIP119:IdentityReference",
+            "Link": "CIP119:LinkReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP119:referenceHash",
+              "@context": {
+                "hashDigest": "CIP119:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "paymentAddress": "CIP119:paymentAddress",
+        "givenName": "CIP119:givenName",
+        "image": "CIP119:image",
+        "objectives": "CIP119:objectives",
+        "motivations": "CIP119:motivations",
+        "qualifications": "CIP119:qualifications",
+        "doNotList": "CIP119:doNotList"
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "hashAlgorithm": {
+    "@value": "blake2b-256"
+  },
+  "body": {
+    "doNotList": false,
+    "givenName": {
+      "@value": "ADA Ocean"
+    },
+    "motivations": {
+      "@value": "As SPO we are motivated by a commitment to drive Cardano's evolution into a leading decentralized financial platform that is accessible and equitable. Our dedication stems from a belief in the transformative power of Cardano to facilitate secure, scalable, and sustainable economic activities worldwide. We are particularly inspired to ensure the network's profitability and self-sustainability for all stakeholders. By serving as a DRep, we aim to actively contribute to governance decisions that enhance the network's infrastructure and community engagement, ensuring that Cardano remains innovative and responsive to the needs of its diverse user base."
+    },
+    "objectives": {
+      "@value": "ADA Ocean is dedicated to advocating for the best interests of Cardano stakeholders, focusing on the development of a high-speed, efficient, and eco-friendly blockchain. Our goal is to establish a sustainable economic model that empowers stake pool operators to sustain their operations through minimal transaction fees. Key to this is the adoption of high-throughput technologies such as Input Endorsers, which are crucial for scaling the network to meet the needs of a global financial system. We aim to ensure that Cardano evolves into a robust platform that is capable, decentralized, and accessible to all, thereby solidifying its place as a leader in blockchain technology."
+    },
+    "paymentAddress": {
+      "@value": ""
+    },
+    "qualifications": {
+      "@value": "ADA Ocean offers extensive experience and technical proficiency in managing a high-performance stake pool that consistently surpasses the standards of the Cardano network. Our team is composed of IT professionals who specialize in network security, scalability solutions. We have a proven track record of reliability, transparency, which positions us uniquely to represent the Cardano community effectively."
+    },
+    "references": [
+      {
+        "@type": "Link",
+        "label": {
+          "@value": "ADA Ocean on x.com"
+        },
+        "uri": {
+          "@value": "https://x.com/ada_ocean"
+        }
+      },
+      {
+        "@type": "Identity",
+        "label": {
+          "@value": "ADA Ocean"
+        },
+        "uri": {
+          "@value": "https://adaocean.com/"
+        }
+      }
+    ]
+  }
+}
